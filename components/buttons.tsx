@@ -18,7 +18,7 @@ export function SignInbutton(){
         return (
             <Link href={'/dashboard'}>
                 <Image
-                    src={session.user?.image ?? '/next.svg'}
+          src={session.user?.image ?? '/mememan.webp'}
                     alt="Your Name"
                     width={32}
                     height={32}
