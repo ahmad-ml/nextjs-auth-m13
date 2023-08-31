@@ -20,7 +20,7 @@ export default function NavMenu() {
                 <li>
                     <ThemeToggle />
                 </li>
-                                <li>
+                <li>
                     <Link href={'/theme'}>Theme</Link>
                 </li>
                 <li>
