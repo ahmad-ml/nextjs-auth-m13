@@ -14,6 +14,7 @@ interface Props {
 }
 
 export async function generateStaticParams() {
+    console.log('hjer eis tasfkljadls;fjl;adjsf', base_uri);
     const posts: Post[] = await fetch(`${base_uri}/api/content`).then(
         (res) => res.json()
     );
