@@ -1,3 +1,4 @@
+import AuthCheck from "@/components/AuthCheck";
 import { SignInbutton, SignOutButton } from "@/components/buttons";
 import { ThemeToggle } from "@/components/themetoggle";
 import Image from "next/image";
@@ -40,9 +41,9 @@ export default function NavMenu() {
                 </li>
 
                 <li>
-                    {/* <AuthCheck> */}
+                    <AuthCheck>
                         <SignOutButton />
-                    {/* </AuthCheck> */}
+                    </AuthCheck>
                 </li>
 
 

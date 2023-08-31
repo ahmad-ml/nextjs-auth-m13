@@ -13,10 +13,10 @@ export default async function Dashboard() {
     redirect('/api/auth/signin');
   }
 
-  const currentUserEmail = session?.user?.email!;
+  const currentUserName = session?.user?.name!;
   const user = await prisma.user.findUnique({
     where: {
-      email: currentUserEmail,
+      name: currentUserName,
     },
   });
 
