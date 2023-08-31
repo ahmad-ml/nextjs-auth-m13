@@ -13,20 +13,18 @@ interface Props {
     params : { slug: string };
 }
 
-export async function generateStaticParams() {
-    console.log('hjer eis tasfkljadls;fjl;adjsf', base_uri);
-    const posts: Post[] = await fetch(`${base_uri}/api/content`).then(
-        (res) => res.json()
-    );
+// export async function generateStaticParams() {
+//     const posts: Post[] = await fetch(`${base_uri}/api/content`).then(
+//         (res) => res.json()
+//     );
 
-    return posts.map((post) => ({
-        params: post.slug,
-    }));
-}
-
+//     return posts.map((post) => ({
+//         params: post.slug,
+//     }));
+// }
 
 export default async function PostPage({ params }: Props) {
-    const posts: Post[] = await fetch(`${base_uri}/api/content`, { cache: "force-cache"}).then(
+    const posts: Post[] = await fetch(`${base_uri}/api/content`).then(
         (res) => res.json()
     );
 
