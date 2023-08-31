@@ -5,9 +5,9 @@ import Image from 'next/image';
 import Link from "next/link";
 
 
+
 export function SignInbutton(){
     const { data: session, status } = useSession();
-    console.log(session, status)
 
     if (status === 'loading'){
         return <>...</>
@@ -26,8 +26,6 @@ export function SignInbutton(){
             </Link>
         )
     }
-
-
 
 
    return <button onClick={() => signIn()}>Sign in</button>;

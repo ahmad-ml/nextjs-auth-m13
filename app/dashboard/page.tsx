@@ -8,7 +8,6 @@ import { ProfileForm } from './ProfileForm';
 
 export default async function Dashboard() {
   const session = await getServerSession(authOptions);
-  console.log(JSON.stringify(session));
 
   if (!session) {
     redirect('/api/auth/signin');

@@ -1,3 +1,5 @@
+import { base_uri } from "@/app/api/routes";
+
 export const revalidate = 420;
 
 
@@ -12,7 +14,7 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-    const posts: Post[] = await fetch('http://localhost:3000/api/content').then(
+    const posts: Post[] = await fetch(`${base_uri}/api/content`).then(
         (res) => res.json()
     );
 
@@ -23,7 +25,7 @@ export async function generateStaticParams() {
 
 
 export default async function PostPage({ params }: Props) {
-    const posts: Post[] = await fetch('http://localhost:3000/api/content', { cache: "force-cache"}).then(
+    const posts: Post[] = await fetch(`${base_uri}/api/content`, { cache: "force-cache"}).then(
         (res) => res.json()
     );
 
