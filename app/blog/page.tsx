@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import { getServerSession } from "next-auth";
+import { NextResponse } from "next/server";
 import { authOptions } from "../api/auth/[...nextauth]/route";
+import { base_uri } from "../api/routes";
 
 
 export const metadata: Metadata = {
@@ -13,8 +15,7 @@ export default async function Blog() {
   const session = await getServerSession(authOptions);
 
   if (!session) {
-    // redirect('/api/auth/signin');
-    return <p>You must be signed in...</p>
+    return NextResponse.redirect(`${base_uri}/api/auth/signin`);
   } else 
 
   return (

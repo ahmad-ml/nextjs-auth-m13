@@ -1,5 +1,6 @@
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
+import { base_uri } from "./app/api/routes";
 
 export default function middlweware(request: NextRequest) {
   if (request.nextUrl.pathname.startsWith("/blog")) {
@@ -21,7 +22,7 @@ export default function middlweware(request: NextRequest) {
       });
       return response;
     } else {
-      return NextResponse.redirect("/api/auth/signin");
+      return NextResponse.redirect(`${base_uri}/api/auth/signin`);
     }
   }
 }
