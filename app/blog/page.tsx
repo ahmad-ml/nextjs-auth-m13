@@ -1,4 +1,6 @@
 import { Metadata } from "next";
+import { getServerSession } from "next-auth";
+import { authOptions } from "../api/auth/[...nextauth]/route";
 
 
 export const metadata: Metadata = {
@@ -6,9 +8,15 @@ export const metadata: Metadata = {
     description: 'Learn more about our company',
 }
 
-export function Blog() {
-  
-  
+export default async function Blog() {
+
+  const session = await getServerSession(authOptions);
+
+  if (!session) {
+    // redirect('/api/auth/signin');
+    return <p>You must be signed in...</p>
+  } else 
+
   return (
     <div>
       <h1>Ahmad Blog</h1>
