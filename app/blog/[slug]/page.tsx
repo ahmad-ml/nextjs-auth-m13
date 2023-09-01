@@ -3,6 +3,7 @@ import { base_uri } from "@/app/api/routes";
 export const revalidate = 420;
 
 
+
 interface Post {
     title: string;
     content: string;
@@ -24,11 +25,14 @@ interface Props {
 // }
 
 export default async function PostPage({ params }: Props) {
+    
     const posts: Post[] = await fetch(`${base_uri}/api/content`).then(
         (res) => res.json()
     );
 
+
     const post = posts.find((post) => post.slug === params.slug)!;
+
 
     return (
         <div>

@@ -4,31 +4,31 @@ import { NextResponse } from "next/server";
 const posts = [
   {
     title: "Lorem Ipsum",
-    slug: "lorem-ipsum",
+    slug: "1",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.",
   },
   {
     title: "Dolor Sit Amet",
-    slug: "dolor-sit-amet",
+    slug: "2",
     content:
       "Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.",
   },
   {
     title: "Consectetur Adipiscing",
-    slug: "consectetur-adipiscing",
+    slug: "3",
     content:
       "Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.",
   },
   {
     title: "Integer Nec Odio",
-    slug: "integer-nec-odio",
+    slug: "4",
     content:
       "Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent.",
   },
   {
     title: "Praesent Libero",
-    slug: "praesent-libero",
+    slug: "5",
     content:
       "Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna.",
   },
