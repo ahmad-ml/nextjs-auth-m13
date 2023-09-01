@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import type { NextRequest } from "next/server";
 
 
 
@@ -8,12 +7,8 @@ export const metadata: Metadata = {
     description: 'Learn more about our company',
 }
 
-export default async function Blog(response: NextRequest) {
-
-
+export function Blog() {
   
-
-
   
   return (
     <div>
